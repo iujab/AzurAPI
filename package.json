@@ -34,6 +34,28 @@
     "typescript": "^5.8.3",
     "vitest": "^3.1.1"
   },
+  "description": "Azur Lane local database API with full ship, equipment, and chapter data",
+  "keywords": [
+    "azurlane",
+    "azur-lane",
+    "azur",
+    "lane",
+    "api",
+    "database",
+    "shipgirls",
+    "gacha",
+    "waifu"
+  ],
+  "homepage": "https://github.com/iujab/AzurAPI#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iujab/AzurAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iujab/AzurAPI/issues"
+  },
+  "license": "MIT",
+  "author": "",
   "publishConfig": {
     "access": "public"
   }
