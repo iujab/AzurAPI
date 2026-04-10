@@ -1,0 +1,57 @@
+name: Refresh Ship Data
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # Every Monday at midnight UTC
+  workflow_dispatch:       # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Sparse-clone upstream data
+        run: |
+          git clone --filter=blob:none --no-checkout \
+            https://github.com/AzurLaneTools/AzurLaneData.git \
+            upstream/azurlane-data
+          git -C upstream/azurlane-data sparse-checkout init --cone
+          git -C upstream/azurlane-data sparse-checkout set \
+            EN/sharecfgdata EN/ShareCfg \
+            CN/sharecfgdata CN/ShareCfg \
+            JP/sharecfgdata JP/ShareCfg
+          git -C upstream/azurlane-data checkout
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build data
+        run: npm run build:data
+
+      - name: Verify data
+        run: npm run verify
+
+      - name: Commit and push if changed
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes, skipping commit"
+            exit 0
+          fi
+          UPSTREAM_SHA=$(git -C upstream/azurlane-data rev-parse --short HEAD)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh ship data (upstream ${UPSTREAM_SHA})"
+          git push

@@ -1,0 +1,151 @@
+import { describe, it, expect, beforeAll } from "vitest";
+import { buildShip, buildAllShips, createBuildContext } from "../../src/normalize/ship.js";
+import type { BuildContext } from "../../src/normalize/ship.js";
+
+let ctx: BuildContext;
+
+beforeAll(async () => {
+  ctx = await createBuildContext();
+});
+
+describe("buildShip", () => {
+  describe("Belfast (20212) — Super Rare CL, no retrofit", () => {
+    it("identity", () => {
+      const ship = buildShip("20212", ctx);
+      expect(ship).not.toBeNull();
+      if (!ship) return;
+      expect(ship.id).toBe("20212");
+      expect(ship.names.en).toBe("Belfast");
+      expect(ship.names.code).toBe("HMS Belfast");
+      expect(ship.rarity).toBe("Super Rare");
+      expect(ship.hullType).toBe("Light Cruiser");
+      expect(ship.nationality).toBe("Royal Navy");
+      expect(ship.class).toBe("Edinburgh Class");
+      expect(ship.stars.value).toBe(6);
+      expect(ship.retrofit).toBe(false);
+    });
+
+    it("stats", () => {
+      const ship = buildShip("20212", ctx)!;
+      // Level 100 stats (with enhance)
+      expect(ship.stats.level100.health).toBe(3400);
+      expect(ship.stats.level100.firepower).toBe(160);
+      expect(ship.stats.level100.torpedo).toBe(304);
+      expect(ship.stats.level100.antiwar).toBe(253);
+      expect(ship.stats.level100.reload).toBe(163);
+      // Level 120
+      expect(ship.stats.level120.health).toBeGreaterThan(3400);
+      // No retrofit stats
+      expect(ship.stats.level100Retrofit).toBeUndefined();
+      expect(ship.stats.level120Retrofit).toBeUndefined();
+      // Enhance
+      expect(ship.enhanceValue).toEqual({ firepower: 33, torpedo: 63, aviation: 0, reload: 50 });
+    });
+
+    it("slots", () => {
+      const ship = buildShip("20212", ctx)!;
+      expect(ship.slots).toHaveLength(3);
+      expect(ship.slots[0]!.maxEfficiency).toBe(1.5);
+      expect(ship.slots[1]!.maxEfficiency).toBe(1.55);
+    });
+
+    it("skills", () => {
+      const ship = buildShip("20212", ctx)!;
+      expect(ship.skills).toHaveLength(3);
+      expect(ship.skills.map(s => s.names.en)).toEqual([
+        "Burn Order",
+        "Smokescreen: Light Cruisers",
+        expect.stringContaining("All Out Assault"),
+      ]);
+      // Check placeholder substitution worked
+      const burnOrder = ship.skills.find(s => s.names.en === "Burn Order")!;
+      expect(burnOrder.description).toContain("25.0%");
+      expect(burnOrder.description).not.toContain("$1");
+      expect(burnOrder.color).toBe("yellow");
+    });
+
+    it("limit breaks", () => {
+      const ship = buildShip("20212", ctx)!;
+      expect(ship.limitBreaks).toHaveLength(3);
+      // limitBreaks is an array of arrays; first element contains 'Unlock All Out Assault'
+      const lb0 = ship.limitBreaks![0]!;
+      expect(Array.isArray(lb0)).toBe(true);
+      expect((lb0 as string[]).some(s => s.includes("Unlock All Out Assault"))).toBe(true);
+    });
+
+    it("construction", () => {
+      const ship = buildShip("20212", ctx)!;
+      expect(ship.construction?.availableIn?.light).toBe(true);
+      expect(ship.construction?.availableIn?.heavy).toBe(false);
+    });
+
+    it("fleet tech", () => {
+      const ship = buildShip("20212", ctx)!;
+      expect(ship.fleetTech?.techPoints.total).toBe(54);
+    });
+
+    it("skins", () => {
+      const ship = buildShip("20212", ctx)!;
+      expect(ship.skins.length).toBeGreaterThanOrEqual(5);
+      const defaultSkin = ship.skins.find(s => s.info.obtainedFrom === "Default");
+      expect(defaultSkin).toBeDefined();
+    });
+
+    it("misc", () => {
+      const ship = buildShip("20212", ctx)!;
+      expect(ship.misc?.voice?.name).toBe("Yui Horie");
+    });
+  });
+
+  describe("Javelin (20121) — Elite DD, has retrofit", () => {
+    it("identity + retrofit", () => {
+      const ship = buildShip("20121", ctx);
+      expect(ship).not.toBeNull();
+      if (!ship) return;
+      expect(ship.names.en).toBe("Javelin");
+      expect(ship.rarity).toBe("Elite");
+      expect(ship.hullType).toBe("Destroyer");
+      expect(ship.retrofit).toBe(true);
+    });
+
+    it("has retrofit stats", () => {
+      const ship = buildShip("20121", ctx)!;
+      expect(ship.stats.level100Retrofit).toBeDefined();
+      expect(ship.stats.level120Retrofit).toBeDefined();
+      // Retrofit stats should be >= non-retrofit
+      expect(ship.stats.level100Retrofit!.health).toBeGreaterThanOrEqual(ship.stats.level100.health);
+    });
+  });
+
+  describe("Enterprise (10706) — Super Rare CV, Eagle Union", () => {
+    it("identity", () => {
+      // Find Enterprise's group_type by scanning for code === 77 in ship_data_group
+      let enterpriseGroupType: string | undefined;
+      for (const [, val] of Object.entries(ctx.en.group)) {
+        if (val !== undefined && val.code === 77) {
+          enterpriseGroupType = String(val.group_type);
+          break;
+        }
+      }
+      expect(enterpriseGroupType).toBeDefined();
+      const ship = buildShip(enterpriseGroupType!, ctx);
+      expect(ship).not.toBeNull();
+      expect(ship!.names.en).toBe("Enterprise");
+      expect(ship!.rarity).toBe("Super Rare");
+      expect(ship!.hullType).toBe("Aircraft Carrier");
+      expect(ship!.nationality).toBe("Eagle Union");
+    });
+  });
+
+  describe("bulk build", () => {
+    it("builds at least 700 ships without error", () => {
+      const ships = buildAllShips(ctx);
+      expect(ships.length).toBeGreaterThanOrEqual(700);
+      // Every ship must have required fields
+      for (const ship of ships) {
+        expect(ship.id).toBeTruthy();
+        expect(ship.names.en).toBeTruthy();
+      }
+    });
+  });
+});
