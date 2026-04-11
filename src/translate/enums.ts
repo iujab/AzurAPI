@@ -17,21 +17,15 @@ export const RARITY_MAP: Record<number, "Normal" | "Rare" | "Elite" | "Super Rar
 /**
  * Resolve a rarity integer to its display string.
  *
- * Rules:
- *   - int === 6 && isResearch && blueprintVersion >= 6  → "Decisive"
- *   - int === 6 && isResearch                            → "Priority"
- *   - else                                               → RARITY_MAP[int] || "Normal"
+ * Research ships are keyed off the raw `rarity` value, not `blueprint_version`:
+ *   - rarity === 5 && isResearch → "Priority"
+ *   - rarity === 6 && isResearch → "Decisive"
+ *   - else                       → RARITY_MAP[rarity] ?? "Normal"
  */
-export function rarityName(
-  rarity: number,
-  isResearch: boolean,
-  blueprintVersion: number | undefined,
-): string {
-  if (rarity === 6 && isResearch) {
-    if (blueprintVersion !== undefined && blueprintVersion >= 6) {
-      return "Decisive";
-    }
-    return "Priority";
+export function rarityName(rarity: number, isResearch: boolean): string {
+  if (isResearch) {
+    if (rarity === 5) return "Priority";
+    if (rarity === 6) return "Decisive";
   }
   return RARITY_MAP[rarity] ?? "Normal";
 }
@@ -81,19 +75,29 @@ export function nationalityName(code: number): string {
 // ---------------------------------------------------------------------------
 
 /**
- * Skill type int → AzurAPI color.
- * 1 = offensive (yellow), 2 = support (pink), 3 = defensive (blue), 0 = unset (pink).
+ * Skill type int → Azur Lane in-client border color.
+ *
+ *   1 = offensive → "red"
+ *   2 = defensive → "blue"
+ *   3 = support   → "yellow"
+ *   0 = unset / placeholder (legacy passives like "Repair I") → "blue"
+ *
+ * NOTE: this corrects a long-standing AzurAPI mislabeling where the map read
+ *   1 → "yellow", 2 → "pink", 3 → "blue"
+ * — the game type numbers had been bound to the wrong category names, and
+ * the "pink" sentinel was invented to paper over type 2. Consumers relying
+ * on the old labels will now see the in-game colors instead.
  */
-export const SKILL_COLOR_MAP: Record<number, "red" | "pink" | "gold" | "yellow" | "blue"> = {
-  0: "pink",
-  1: "yellow",
-  2: "pink",
-  3: "blue",
+export const SKILL_COLOR_MAP: Record<number, "red" | "yellow" | "blue"> = {
+  0: "blue",
+  1: "red",
+  2: "blue",
+  3: "yellow",
 };
 
-/** Look up a skill type color; falls back to "pink". */
-export function skillColor(type: number): "red" | "pink" | "gold" | "yellow" | "blue" {
-  return SKILL_COLOR_MAP[type] ?? "pink";
+/** Look up a skill type color; falls back to "blue" for unknown types. */
+export function skillColor(type: number): "red" | "yellow" | "blue" {
+  return SKILL_COLOR_MAP[type] ?? "blue";
 }
 
 // ---------------------------------------------------------------------------

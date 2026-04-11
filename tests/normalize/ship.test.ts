@@ -61,7 +61,8 @@ describe("buildShip", () => {
       const burnOrder = ship.skills.find(s => s.names.en === "Burn Order")!;
       expect(burnOrder.description).toContain("25.0%");
       expect(burnOrder.description).not.toContain("$1");
-      expect(burnOrder.color).toBe("yellow");
+      // Burn Order is an offensive skill (game type 1) → "red"
+      expect(burnOrder.color).toBe("red");
     });
 
     it("limit breaks", () => {

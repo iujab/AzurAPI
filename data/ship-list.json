@@ -939,19 +939,19 @@
     "id": "19901",
     "name": "Seattle",
     "hullType": "Light Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "19902",
     "name": "Georgia",
     "hullType": "Battleship",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "19903",
     "name": "Anchorage",
     "hullType": "Heavy Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "19904",
@@ -963,13 +963,13 @@
     "id": "19905",
     "name": "Halford",
     "hullType": "Destroyer",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "19906",
     "name": "Kansas",
     "hullType": "Battleship",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "20101",
@@ -1665,31 +1665,31 @@
     "id": "29901",
     "name": "Neptune",
     "hullType": "Light Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "29902",
     "name": "Monarch",
     "hullType": "Battleship",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "29903",
     "name": "Cheshire",
     "hullType": "Heavy Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "29904",
     "name": "Drake",
     "hullType": "Heavy Cruiser",
-    "rarity": "Priority"
+    "rarity": "Decisive"
   },
   {
     "id": "29905",
     "name": "Plymouth",
     "hullType": "Light Cruiser",
-    "rarity": "Priority"
+    "rarity": "Decisive"
   },
   {
     "id": "30101",
@@ -2643,43 +2643,43 @@
     "id": "39901",
     "name": "Ibuki",
     "hullType": "Heavy Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "39902",
     "name": "Izumo",
     "hullType": "Battleship",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "39903",
     "name": "Kitakaze",
     "hullType": "Destroyer",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "39904",
     "name": "Azuma",
     "hullType": "Large Cruiser ",
-    "rarity": "Priority"
+    "rarity": "Decisive"
   },
   {
     "id": "39905",
     "name": "Hakuryuu ",
     "hullType": "Aircraft Carrier",
-    "rarity": "Priority"
+    "rarity": "Decisive"
   },
   {
     "id": "39906",
     "name": "Shimanto",
     "hullType": "Light Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "39907",
     "name": "Daisen",
     "hullType": "Battleship",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "40101",
@@ -3171,49 +3171,49 @@
     "id": "49901",
     "name": "Roon",
     "hullType": "Heavy Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "49902",
     "name": "Friedrich der Große",
     "hullType": "Battleship",
-    "rarity": "Priority"
+    "rarity": "Decisive"
   },
   {
     "id": "49903",
     "name": "Mainz",
     "hullType": "Light Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "49904",
     "name": "Odin",
     "hullType": "Battlecruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "49905",
     "name": "Ägir",
     "hullType": "Large Cruiser ",
-    "rarity": "Priority"
+    "rarity": "Decisive"
   },
   {
     "id": "49906",
     "name": "August von Parseval ",
     "hullType": "Aircraft Carrier",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "49907",
     "name": "Prinz Rupprecht",
     "hullType": "Battlecruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "49908",
     "name": "Felix Schultz",
     "hullType": "Destroyer",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "49909",
@@ -3381,7 +3381,7 @@
     "id": "59901",
     "name": "Harbin",
     "hullType": "Light Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "60102",
@@ -3591,7 +3591,7 @@
     "id": "69901",
     "name": "Marco Polo",
     "hullType": "Battleship",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "69902",
@@ -3603,7 +3603,7 @@
     "id": "69903",
     "name": "Vittorio Cuniberti",
     "hullType": "Destroyer",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "70102",
@@ -3819,7 +3819,7 @@
     "id": "79901",
     "name": "Chkalov",
     "hullType": "Aircraft Carrier",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "79902",
@@ -3831,7 +3831,7 @@
     "id": "79903",
     "name": "Dmitri Donskoi",
     "hullType": "Light Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "80101",
@@ -3975,25 +3975,25 @@
     "id": "89901",
     "name": "Saint Louis",
     "hullType": "Heavy Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "89902",
     "name": "Champagne",
     "hullType": "Battleship",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "89903",
     "name": "Brest",
     "hullType": "Large Cruiser ",
-    "rarity": "Priority"
+    "rarity": "Decisive"
   },
   {
     "id": "89904",
     "name": "Bayard",
     "hullType": "Light Cruiser",
-    "rarity": "Super Rare"
+    "rarity": "Priority"
   },
   {
     "id": "110101",

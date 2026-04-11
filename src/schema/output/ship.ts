@@ -82,7 +82,7 @@ export const ShipSchema = z.object({
 
   skills: z.array(
     z.object({
-      color: z.enum(["red", "pink", "gold", "yellow", "blue"]),
+      color: z.enum(["red", "yellow", "blue"]),
       // `en` is required; additional language keys are allowed as strings
       names: z.object({ en: z.string() }).catchall(z.string()),
       description: z.string(),

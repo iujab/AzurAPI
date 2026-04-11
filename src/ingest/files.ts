@@ -12,6 +12,8 @@ import {
   type ShipSkinWords,
   ShipDataStrengthenSchema,
   type ShipDataStrengthen,
+  ShipStrengthenBlueprintSchema,
+  type ShipStrengthenBlueprint,
   ShipDataBlueprintSchema,
   type ShipDataBlueprint,
   ShipDataTransSchema,
@@ -50,23 +52,38 @@ import {
 import { regionPath, type Region } from "./upstream.js";
 
 function readJsonFile(filePath: string): unknown {
+  let raw: string;
   try {
-    const raw = fs.readFileSync(filePath, "utf-8");
-    const parsed: unknown = JSON.parse(raw);
-    // Many upstream files have an "all" key containing an array of IDs
-    // (an index listing all record keys). Strip it before validation.
-    if (parsed !== null && typeof parsed === "object" && !Array.isArray(parsed)) {
-      const obj = parsed as Record<string, unknown>;
-      if ("all" in obj && Array.isArray(obj["all"])) {
-        const { all: _all, ...rest } = obj;
-        return rest;
-      }
-    }
-    return parsed;
-  } catch {
-    // File missing or unreadable — treat as empty
-    return {};
+    raw = fs.readFileSync(filePath, "utf-8");
+  } catch (err) {
+    throw new Error(
+      `azurapi ingest: failed to read ${filePath}: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
+    );
   }
+
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch (err) {
+    throw new Error(
+      `azurapi ingest: failed to parse JSON in ${filePath}: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
+    );
+  }
+
+  // Many upstream files have an "all" key containing an array of IDs
+  // (an index listing all record keys). Strip it before validation.
+  if (parsed !== null && typeof parsed === "object" && !Array.isArray(parsed)) {
+    const obj = parsed as Record<string, unknown>;
+    if ("all" in obj && Array.isArray(obj["all"])) {
+      const { all: _all, ...rest } = obj;
+      return rest;
+    }
+  }
+  return parsed;
 }
 
 function loadFile<T extends z.ZodTypeAny>(
@@ -143,6 +160,15 @@ export function loadShipDataBlueprint(region: Region = "EN"): ShipDataBlueprint 
   return loadFile(
     ShipDataBlueprintSchema,
     regionPath(region, "ShareCfg", "ship_data_blueprint.json"),
+  );
+}
+
+export function loadShipStrengthenBlueprint(
+  region: Region = "EN",
+): ShipStrengthenBlueprint {
+  return loadFile(
+    ShipStrengthenBlueprintSchema,
+    regionPath(region, "ShareCfg", "ship_strengthen_blueprint.json"),
   );
 }
 

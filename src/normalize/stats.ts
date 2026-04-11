@@ -2,6 +2,8 @@ import type { Ship, StatBlock } from "../schema/output/ship.js";
 import type {
   ShipDataStatistics,
   ShipDataStrengthen,
+  ShipStrengthenBlueprint,
+  ShipDataBlueprint,
   ShipDataTrans,
   TransformDataTemplate,
 } from "../schema/raw/index.js";
@@ -16,11 +18,15 @@ export interface StatsInputs {
   en: {
     statistics: ShipDataStatistics;
     strengthen: ShipDataStrengthen;
+    strengthenBlueprint: ShipStrengthenBlueprint;
+    blueprint: ShipDataBlueprint;
     trans: ShipDataTrans;
     transformDataTemplate: TransformDataTemplate;
   };
   groupType: string;
   strengthenId: string;
+  /** True when this group is a research/blueprint ship. */
+  isResearch: boolean;
 }
 
 export interface StatsOutput {
@@ -33,12 +39,12 @@ export interface StatsOutput {
 // ---------------------------------------------------------------------------
 
 /**
- * Build a strengthen bonus array (12 elements) from the `durability` field.
- *
- * Strengthen durability mapping (0-indexed):
+ * Build a strengthen bonus array (12 elements) from a 5-element durability
+ * array. Used for both `ship_data_strengthen.durability` and
+ * `ship_strengthen_blueprint.effect` — they share the same layout:
  *   [0] → firepower (attrs index 1)
  *   [1] → torpedo   (attrs index 2)
- *   [2] → (unused / always 0)
+ *   [2] → (unused / always 0 — would be AA)
  *   [3] → aviation  (attrs index 4)
  *   [4] → reload    (attrs index 5)
  */
@@ -49,6 +55,59 @@ function buildStrengthenBonus(durability: readonly number[]): number[] {
   bonus[4] = durability[3] ?? 0; // aviation
   bonus[5] = durability[4] ?? 0; // reload
   return bonus;
+}
+
+/**
+ * Resolve the max strengthen durability for a research ship from
+ * ship_data_blueprint + ship_strengthen_blueprint.
+ *
+ * The blueprint row lists:
+ *   - strengthen_effect: dev-level rows 1..30 (cumulative; last entry is max)
+ *   - fate_strengthen:   fate-sim rows     (cumulative deltas on top of dev max)
+ *
+ * Returns a 5-element array in the same layout as ship_data_strengthen.durability,
+ * or `undefined` if the blueprint entry/strengthen rows are missing.
+ */
+function researchDurability(
+  groupType: string,
+  blueprint: ShipDataBlueprint,
+  strengthenBlueprint: ShipStrengthenBlueprint,
+): number[] | undefined {
+  const bpRow = blueprint[groupType];
+  if (bpRow === undefined) return undefined;
+
+  const effectIds = bpRow.strengthen_effect ?? [];
+  const fateIds = bpRow.fate_strengthen ?? [];
+
+  const lastEffectId = effectIds[effectIds.length - 1];
+  if (lastEffectId === undefined) return undefined;
+
+  const lastEffectRow = strengthenBlueprint[String(lastEffectId)];
+  if (lastEffectRow === undefined) return undefined;
+
+  const result: number[] = [
+    lastEffectRow.effect[0] ?? 0,
+    lastEffectRow.effect[1] ?? 0,
+    lastEffectRow.effect[2] ?? 0,
+    lastEffectRow.effect[3] ?? 0,
+    lastEffectRow.effect[4] ?? 0,
+  ];
+
+  // Layer on any non-zero fate strengthen max (currently all zero in EN data,
+  // but handle it defensively so future fate entries flow through).
+  const lastFateId = fateIds[fateIds.length - 1];
+  if (lastFateId !== undefined) {
+    const lastFateRow = strengthenBlueprint[String(lastFateId)];
+    if (lastFateRow !== undefined) {
+      result[0] = (result[0] ?? 0) + (lastFateRow.effect[0] ?? 0);
+      result[1] = (result[1] ?? 0) + (lastFateRow.effect[1] ?? 0);
+      result[2] = (result[2] ?? 0) + (lastFateRow.effect[2] ?? 0);
+      result[3] = (result[3] ?? 0) + (lastFateRow.effect[3] ?? 0);
+      result[4] = (result[4] ?? 0) + (lastFateRow.effect[4] ?? 0);
+    }
+  }
+
+  return result;
 }
 
 /**
@@ -189,8 +248,15 @@ function applyRetrofitDeltas(
 // ---------------------------------------------------------------------------
 
 export function normalizeStats(inputs: StatsInputs): StatsOutput {
-  const { lb3RowId, en, groupType, strengthenId } = inputs;
-  const { statistics, strengthen, trans, transformDataTemplate } = en;
+  const { lb3RowId, en, groupType, strengthenId, isResearch } = inputs;
+  const {
+    statistics,
+    strengthen,
+    strengthenBlueprint,
+    blueprint,
+    trans,
+    transformDataTemplate,
+  } = en;
 
   // ------------------------------------------------------------------
   // Get the LB3 statistics row
@@ -208,9 +274,21 @@ export function normalizeStats(inputs: StatsInputs): StatsOutput {
 
   // ------------------------------------------------------------------
   // Strengthen bonus
+  //
+  // Research ships: sum the last strengthen_effect + fate_strengthen rows from
+  // ship_strengthen_blueprint.json (ship_data_strengthen for research ships
+  // either mirrors a partial/legacy value or is all-zero for newer Decisive
+  // ships — don't trust it).
+  //
+  // Non-research ships: use ship_data_strengthen[strengthen_id].durability.
   // ------------------------------------------------------------------
-  const strengthenRow = strengthen[strengthenId];
-  const durability = strengthenRow?.durability ?? [];
+  let durability: readonly number[];
+  if (isResearch) {
+    durability =
+      researchDurability(groupType, blueprint, strengthenBlueprint) ?? [];
+  } else {
+    durability = strengthen[strengthenId]?.durability ?? [];
+  }
   const strengthenBonus = buildStrengthenBonus(durability);
 
   // ------------------------------------------------------------------

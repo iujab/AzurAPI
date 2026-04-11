@@ -3,6 +3,7 @@ export * from "./shipDataStatistics.js";
 export * from "./shipDataBreakout.js";
 export * from "./shipSkinWords.js";
 export * from "./shipDataStrengthen.js";
+export * from "./shipStrengthenBlueprint.js";
 export * from "./shipDataBlueprint.js";
 export * from "./shipDataTrans.js";
 export * from "./shipDataGroup.js";

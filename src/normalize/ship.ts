@@ -6,6 +6,7 @@ import type {
   ShipDataStatistics,
   ShipDataBreakout,
   ShipDataStrengthen,
+  ShipStrengthenBlueprint,
   ShipDataBlueprint,
   ShipDataTrans,
   ShipDataGroup,
@@ -45,6 +46,7 @@ export interface BuildContext {
     statistics: ShipDataStatistics;
     breakout: ShipDataBreakout;
     strengthen: ShipDataStrengthen;
+    strengthenBlueprint: ShipStrengthenBlueprint;
     blueprint: ShipDataBlueprint;
     trans: ShipDataTrans;
     group: ShipDataGroup;
@@ -89,8 +91,6 @@ interface BuildIndexes {
   groupByGroupType: Map<string, ShipDataGroupValue>;
   /** group_type (string) → set of blueprint keys (i.e. group_type is a research ship) */
   researchGroupTypes: Set<string>;
-  /** group_type (string) → blueprint_version */
-  blueprintVersionMap: Map<string, number>;
 }
 
 function buildIndexes(ctx: BuildContext): BuildIndexes {
@@ -104,15 +104,11 @@ function buildIndexes(ctx: BuildContext): BuildIndexes {
   // Build researchGroupTypes: blueprint keys are themselves group_types
   // (confirmed: all 42 blueprint keys appear as group_type values in ship_data_template)
   const researchGroupTypes = new Set<string>();
-  const blueprintVersionMap = new Map<string, number>();
-  for (const [key, bpRow] of Object.entries(ctx.en.blueprint)) {
+  for (const key of Object.keys(ctx.en.blueprint)) {
     researchGroupTypes.add(key);
-    if (bpRow?.blueprint_version !== undefined) {
-      blueprintVersionMap.set(key, bpRow.blueprint_version);
-    }
   }
 
-  return { groupByGroupType, researchGroupTypes, blueprintVersionMap };
+  return { groupByGroupType, researchGroupTypes };
 }
 
 // ---------------------------------------------------------------------------
@@ -166,10 +162,9 @@ export function buildShip(
   }
 
   // -------------------------------------------------------------------------
-  // 3. Determine isResearch and blueprintVersion
+  // 3. Determine isResearch
   // -------------------------------------------------------------------------
   const isResearch = idx.researchGroupTypes.has(groupType);
-  const blueprintVersion = idx.blueprintVersionMap.get(groupType);
 
   // -------------------------------------------------------------------------
   // 4. Determine isEnReleased
@@ -222,7 +217,6 @@ export function buildShip(
     jp: ctx.jp !== undefined ? { statistics: ctx.jp.statistics } : undefined,
     isEnReleased,
     isResearch,
-    blueprintVersion,
     groupRow,
     lookups: ctx.lookups,
   });
@@ -232,9 +226,12 @@ export function buildShip(
     lb3RowId,
     groupType,
     strengthenId,
+    isResearch,
     en: {
       statistics: ctx.en.statistics,
       strengthen: ctx.en.strengthen,
+      strengthenBlueprint: ctx.en.strengthenBlueprint,
+      blueprint: ctx.en.blueprint,
       trans: ctx.en.trans,
       transformDataTemplate: ctx.en.transformDataTemplate,
     },
@@ -430,6 +427,7 @@ export async function createBuildContext(options?: {
     loadShipDataStatistics,
     loadShipDataBreakout,
     loadShipDataStrengthen,
+    loadShipStrengthenBlueprint,
     loadShipDataBlueprint,
     loadShipDataTrans,
     loadShipDataGroup,
@@ -453,6 +451,7 @@ export async function createBuildContext(options?: {
   const enStatistics = loadShipDataStatistics("EN");
   const enBreakout = loadShipDataBreakout("EN");
   const enStrengthen = loadShipDataStrengthen("EN");
+  const enStrengthenBlueprint = loadShipStrengthenBlueprint("EN");
   const enBlueprint = loadShipDataBlueprint("EN");
   const enTrans = loadShipDataTrans("EN");
   const enGroup = loadShipDataGroup("EN");
@@ -501,6 +500,7 @@ export async function createBuildContext(options?: {
       statistics: enStatistics,
       breakout: enBreakout,
       strengthen: enStrengthen,
+      strengthenBlueprint: enStrengthenBlueprint,
       blueprint: enBlueprint,
       trans: enTrans,
       group: enGroup,

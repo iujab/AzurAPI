@@ -41,8 +41,6 @@ export interface IdentityInputs {
   isEnReleased: boolean;
   /** Whether this ship belongs to the research/blueprint category. */
   isResearch: boolean;
-  /** blueprint_version value for research ships (drives Decisive vs Priority). */
-  blueprintVersion?: number;
   /** Pre-resolved group row from ship_data_group (caller looks up by group_type). */
   groupRow: ShipDataGroupValue;
   /** Lookups helper for class/hull/equip name resolution. */
@@ -84,7 +82,6 @@ export function normalizeIdentity(inputs: IdentityInputs): IdentityOutput {
     jp,
     isEnReleased,
     isResearch,
-    blueprintVersion,
     groupRow,
     lookups,
   } = inputs;
@@ -159,7 +156,7 @@ export function normalizeIdentity(inputs: IdentityInputs): IdentityOutput {
   // Rarity
   // ------------------------------------------------------------------
   const rarityInt = enStats.rarity;
-  const rarity = rarityName(rarityInt, isResearch, blueprintVersion) as Ship["rarity"];
+  const rarity = rarityName(rarityInt, isResearch) as Ship["rarity"];
 
   // ------------------------------------------------------------------
   // Stars
