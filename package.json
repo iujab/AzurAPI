@@ -55,7 +55,7 @@
     "url": "https://github.com/iujab/AzurAPI/issues"
   },
   "license": "MIT",
-  "author": "",
+  "author": "iujab",
   "publishConfig": {
     "access": "public"
   }

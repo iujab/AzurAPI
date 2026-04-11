@@ -1,12 +1,12 @@
 <img src="https://github.com/iujab/azurlane-images/blob/main/banner.png" />
 
-# AzurAPI - js
+# LycorisTech/AzurAPI
 
 A self-maintained, current Azur Lane data library. Drop-in replacement for the `@azurapi/azurapi` package.
 
 ## Why?
 
-The older and amazing `@azurapi/azurapi` ecosystem is now 3+ years stale. I have fond memories starting off my computer science hobby building a discord bot using that API. Recently, when revisiting that project, I noticed that the azurapi package was years out of date, likely due to the wiki scraper method no longer being viable. This AzurAPI builds on the [AzurLaneTools/AzurLaneData](https://github.com/AzurLaneTools/AzurLaneData) and [nobbyfix/AzurLane-AssetDownloader](https://github.com/nobbyfix/AzurLane-AssetDownloader) repos so our data stays fresh within hours of each game patch.
+The older and amazing `@azurapi/azurapi` ecosystem is now 3+ years stale. I have fond memories starting off my computer science hobby building a discord bot using that API. Recently, when revisiting my old discord bot, I noticed that the azurapi package was years out of date, likely due to the wiki scraper method no longer being viable. This AzurAPI builds on the [AzurLaneTools/AzurLaneData](https://github.com/AzurLaneTools/AzurLaneData) and [nobbyfix/AzurLane-AssetDownloader](https://github.com/nobbyfix/AzurLane-AssetDownloader) repos so our data stays fresh within hours of each game patch.
 
 ## Installation
 
@@ -42,6 +42,14 @@ const results = azur.ships.search("Enterp", 5); // top 5 matches
 ```
 
 That's it. The `ships.get()` API is compatible. Ship objects match the same schema!
+
+### Relationship to the original AzurAPI project
+
+This library is a **schema-compatible successor** to [`@azurapi/azurapi`](https://github.com/AzurAPI/azurapi-js) (GPL-3.0) and its sister data repo [`AzurAPI/azurapi-js-setup`](https://github.com/AzurAPI/azurapi-js-setup) (AGPL-3.0).
+
+**This project is not a fork and does not contain any code from those repositories.** It is an independent rewrite built from scratch against the decompiled game data from [AzurLaneTools/AzurLaneData](https://github.com/AzurLaneTools/AzurLaneData), which is a completely separate data source.
+
+The output JSON schema (field names, structure, rarity values, etc.) is deliberately kept shape-compatible with the original so existing devs can migrate with a single import change.
 
 ## Data Freshness
 
@@ -102,12 +110,12 @@ Ship paintings and thumbnails are hosted in a separate GitHub repo: [iujab/azurl
 - **Paintings** — skin art in WebP format (`paintings/{asset_name}.webp`)
 - **Thumbnails** — shipyard icons in PNG format (`thumbnails/{group_type}.png`)
 
-## License
+## License and Rights
 
-MIT for the code. Game data is extracted from publicly available game files and is the property of Yostar/Manjuu/Yongshi. This project is not affiliated with or endorsed by any of these companies.
+This is an **unofficial, non-commercial, community-maintained fan project**. It is not developed, endorsed, sponsored, or in any way affiliated with Manjuu, Yongshi, Yostar, or any of their subsidiaries.
 
 ## Acknowledgments
 
 - [AzurLaneTools/AzurLaneData](https://github.com/AzurLaneTools/AzurLaneData) — upstream auto-updating game data
 - [nobbyfix/AzurLane-AssetDownloader](https://github.com/nobbyfix/AzurLane-AssetDownloader) — game asset extraction
-- [AzurAPI/azurapi-js](https://github.com/AzurAPI/azurapi-js) — the original library whose schema we replicate, and is the base inspiration for this project!❤️
+- [AzurAPI/azurapi-js](https://github.com/AzurAPI/azurapi-js) — the original library whose schema we replicate, and the base inspiration for this project!❤️
