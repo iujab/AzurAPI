@@ -47,7 +47,7 @@ That's it. The `ships.get()` API is compatible. Ship objects match the same sche
 
 This library is a **schema-compatible successor** to [`@azurapi/azurapi`](https://github.com/AzurAPI/azurapi-js) (GPL-3.0) and its sister data repo [`AzurAPI/azurapi-js-setup`](https://github.com/AzurAPI/azurapi-js-setup) (AGPL-3.0).
 
-**This project is not a fork and does not contain any code from those repositories.** It is an independent rewrite built from scratch against the decompiled game data from [AzurLaneTools/AzurLaneData](https://github.com/AzurLaneTools/AzurLaneData), which is a completely separate data source.
+This project is not a fork and does not contain any code from those repositories. It is an independent rewrite built from scratch against the decompiled game data from [AzurLaneTools/AzurLaneData](https://github.com/AzurLaneTools/AzurLaneData).
 
 The output JSON schema (field names, structure, rarity values, etc.) is deliberately kept shape-compatible with the original so existing devs can migrate with a single import change.
 
