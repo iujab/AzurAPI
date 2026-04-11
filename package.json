@@ -46,13 +46,13 @@
     "gacha",
     "waifu"
   ],
-  "homepage": "https://github.com/iujab/AzurAPI#readme",
+  "homepage": "https://github.com/iujab/Lycoris-AzurAPI#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iujab/AzurAPI.git"
+    "url": "git+https://github.com/iujab/Lycoris-AzurAPI.git"
   },
   "bugs": {
-    "url": "https://github.com/iujab/AzurAPI/issues"
+    "url": "https://github.com/iujab/Lycoris-AzurAPI/issues"
   },
   "license": "MIT",
   "author": "iujab",

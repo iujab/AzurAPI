@@ -79,7 +79,7 @@ Ships have the full AzurAPI-compatible shape including:
 The committed `data/ships.json` is fetchable via GitHub raw URL:
 
 ```
-https://raw.githubusercontent.com/iujab/AzurAPI/main/data/ships.json
+https://raw.githubusercontent.com/iujab/Lycoris-AzurAPI/main/data/ships.json
 ```
 
 Also available: `ship-list.json` (minimal index), `id-map.json` (name→id lookup), `version.json`.
