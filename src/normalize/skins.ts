@@ -46,21 +46,47 @@ function isAlwaysAvailable(time: unknown): boolean {
 }
 
 /**
+ * Pick the preferred main-image painting suffix.
+ *
+ *   1. {painting}_rw  — character layer without background (preferred display)
+ *   2. {painting}     — plain EN file (fallback)
+ *
+ * `_hx` variants are never considered. The skin template's `painting` values
+ * are verified to never contain `_hx`, so checking a literal `_rw` suffix
+ * can't accidentally resolve to an `_hx_rw` / `_rw_hx` sibling.
+ *
+ * When `available` is undefined we fall back to the plain painting — the
+ * build can't prove a suffix exists without a directory scan, and emitting
+ * a URL that 404s is worse than skipping the preference.
+ */
+function preferredMainSuffix(
+  painting: string,
+  available: Set<string> | undefined,
+): "" | "_rw" {
+  if (available === undefined) return "";
+  const lower = painting.toLowerCase();
+  if (available.has(`${lower}_rw`)) return "_rw";
+  return "";
+}
+
+/**
  * Build the variant images map for a skin painting.
  *
  * Variant mapping:
- *   {name}.webp        → "default" (base file — the EN version, may be censored)
+ *   {name}.webp        → "censored" (EN-region file, may be censored, WITH background)
  *   {name}_rw.webp     → "censored_nobg" (EN character layer without background)
  *   {name}_n.webp      → "uncensored" (JP/original version)
  *   {name}_n_rw.webp   → "uncensored_nobg" (JP character without background)
  *   {name}_bj.webp     → "background" (background layer only)
  *
- * "censored" is an alias for "default" since the base file IS the EN version.
+ * `default` is an alias for the preferred main image (see `preferredMainSuffix`),
+ * which biases toward `_rw` when available and falls back to the plain file.
  */
 function buildVariantImages(
   painting: string,
   baseUrl: string,
-  available?: Set<string>,
+  available: Set<string> | undefined,
+  mainSuffix: "" | "_rw",
 ): Ship["skins"][number]["images"] {
   const lower = painting.toLowerCase();
   const has = (suffix: string) => {
@@ -72,8 +98,8 @@ function buildVariantImages(
 
   const images: NonNullable<Ship["skins"][number]["images"]> = {};
 
-  if (has(""))        images.default = url("");
-  if (has(""))        images.censored = url("");         // alias for default
+  if (has(mainSuffix)) images.default = url(mainSuffix);
+  if (has(""))        images.censored = url("");
   if (has("_rw"))     images.censored_nobg = url("_rw");
   if (has("_n"))      images.uncensored = url("_n");
   if (has("_n_rw"))   images.uncensored_nobg = url("_n_rw");
@@ -116,8 +142,9 @@ export function normalizeSkins(inputs: SkinsInputs): { skins: Ship["skins"] } {
           ? (row.desc?.trim() ?? "(unnamed)")
           : "(unnamed)";
 
-    // image URL
-    const image = `${base}/${row.painting}.webp`;
+    // Pick the preferred main image suffix (prefers _rw over plain).
+    const mainSuffix = preferredMainSuffix(row.painting, availablePaintings);
+    const image = `${base}/${row.painting}${mainSuffix}.webp`;
 
     // shop info
     const shopId = row.shop_id;
@@ -167,7 +194,7 @@ export function normalizeSkins(inputs: SkinsInputs): { skins: Ship["skins"] } {
     };
 
     // Build variant images object
-    const images = buildVariantImages(row.painting, base, availablePaintings);
+    const images = buildVariantImages(row.painting, base, availablePaintings, mainSuffix);
 
     skins.push({ name, image, images, info });
   }
