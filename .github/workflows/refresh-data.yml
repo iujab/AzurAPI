@@ -28,6 +28,15 @@ jobs:
             JP/sharecfgdata JP/ShareCfg
           git -C upstream/azurlane-data checkout
 
+      - name: Clone images repo (filenames only, no blobs)
+        run: |
+          git clone --filter=blob:none --no-checkout \
+            https://github.com/iujab/azurlane-images.git \
+            ../azurlane-images
+          cd ../azurlane-images
+          mkdir -p paintings
+          git ls-tree -r --name-only HEAD -- paintings/ | xargs touch
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
