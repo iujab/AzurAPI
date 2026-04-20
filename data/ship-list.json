@@ -4182,6 +4182,42 @@
     "rarity": "Super Rare"
   },
   {
+    "id": "1060010",
+    "name": "Elise",
+    "hullType": "Aircraft Carrier",
+    "rarity": "Super Rare"
+  },
+  {
+    "id": "1060011",
+    "name": "Shizuku",
+    "hullType": "Battleship",
+    "rarity": "Super Rare"
+  },
+  {
+    "id": "1060012",
+    "name": "Shandy",
+    "hullType": "Heavy Cruiser",
+    "rarity": "Super Rare"
+  },
+  {
+    "id": "1060013",
+    "name": "Tsukushi",
+    "hullType": "Destroyer",
+    "rarity": "Super Rare"
+  },
+  {
+    "id": "1060014",
+    "name": "Patty",
+    "hullType": "Submarine",
+    "rarity": "Super Rare"
+  },
+  {
+    "id": "1060015",
+    "name": "Yukino",
+    "hullType": "Light Cruiser",
+    "rarity": "Super Rare"
+  },
+  {
     "id": "1070001",
     "name": "Haruka Amami",
     "hullType": "Light Cruiser",

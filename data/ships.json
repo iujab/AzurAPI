@@ -21351,6 +21351,15 @@
           "live2dModel": true,
           "enClient": "Yes"
         }
+      },
+      {
+        "name": "Unique Sunshine",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/beikaluolaina_3.webp",
+        "info": {
+          "cost": 980,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
       }
     ]
   },
@@ -24705,7 +24714,7 @@
         },
         "info": {
           "cost": 800,
-          "obtainedFrom": "Limited (Event)",
+          "obtainedFrom": "Skin Shop",
           "enClient": "Yes"
         }
       }
@@ -49846,6 +49855,16 @@
         "info": {
           "cost": 780,
           "obtainedFrom": "Skin Shop",
+          "enClient": "Yes"
+        }
+      },
+      {
+        "name": "Dignified Swimsuit Training",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4.webp",
+        "info": {
+          "cost": 1180,
+          "obtainedFrom": "Limited (Event)",
+          "live2dModel": true,
           "enClient": "Yes"
         }
       }
@@ -86775,6 +86794,15 @@
           "obtainedFrom": "Skin Shop",
           "enClient": "Yes"
         }
+      },
+      {
+        "name": "Traces of Summery Love",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yichui_7.webp",
+        "info": {
+          "cost": 980,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
       }
     ]
   },
@@ -89071,7 +89099,7 @@
     ],
     "construction": {
       "availableIn": {
-        "light": false,
+        "light": true,
         "heavy": false,
         "aviation": false,
         "limited": true,
@@ -89144,7 +89172,7 @@
         },
         "info": {
           "cost": 780,
-          "obtainedFrom": "Limited (Event)",
+          "obtainedFrom": "Skin Shop",
           "enClient": "Yes"
         }
       }
@@ -90355,7 +90383,7 @@
         },
         "info": {
           "cost": 780,
-          "obtainedFrom": "Limited (Event)",
+          "obtainedFrom": "Skin Shop",
           "enClient": "Yes"
         }
       },
@@ -94609,7 +94637,7 @@
     "construction": {
       "availableIn": {
         "light": false,
-        "heavy": false,
+        "heavy": true,
         "aviation": false,
         "limited": true,
         "exchange": false
@@ -94682,7 +94710,7 @@
         },
         "info": {
           "cost": 900,
-          "obtainedFrom": "Limited (Event)",
+          "obtainedFrom": "Skin Shop",
           "enClient": "Yes"
         }
       },
@@ -98012,7 +98040,7 @@
     "construction": {
       "availableIn": {
         "light": false,
-        "heavy": false,
+        "heavy": true,
         "aviation": false,
         "limited": true,
         "exchange": false
@@ -98083,7 +98111,7 @@
         },
         "info": {
           "cost": 880,
-          "obtainedFrom": "Limited (Event)",
+          "obtainedFrom": "Skin Shop",
           "enClient": "Yes"
         }
       }
@@ -102734,7 +102762,7 @@
         },
         "info": {
           "cost": 880,
-          "obtainedFrom": "Limited (Event)",
+          "obtainedFrom": "Skin Shop",
           "enClient": "Yes"
         }
       },
@@ -121612,7 +121640,7 @@
         },
         "info": {
           "cost": 880,
-          "obtainedFrom": "Limited (Event)",
+          "obtainedFrom": "Skin Shop",
           "enClient": "Yes"
         }
       }
@@ -134954,6 +134982,15 @@
           "obtainedFrom": "Limited (Event)",
           "enClient": "Yes"
         }
+      },
+      {
+        "name": "Blooms in the Night Sky",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haixiao_3_DOA.webp",
+        "info": {
+          "cost": 1000,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
       }
     ]
   },
@@ -135699,6 +135736,841 @@
         },
         "info": {
           "cost": 900,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
+      }
+    ]
+  },
+  "1060010": {
+    "id": "1060010",
+    "names": {
+      "en": "Elise",
+      "jp": "エリーゼ",
+      "cn": "伊莉丝",
+      "code": "Elise"
+    },
+    "rarity": "Super Rare",
+    "stars": {
+      "stars": "★★★★★★",
+      "value": 6
+    },
+    "thumbnail": "https://raw.githubusercontent.com/iujab/azurlane-images/main/thumbnails/1060010.png",
+    "wikiUrl": "https://azurlane.koumakan.jp/wiki/Elise",
+    "class": "DOAXVV",
+    "hullType": "Aircraft Carrier",
+    "nationality": "KizunaAI",
+    "stats": {
+      "level100": {
+        "health": 6304,
+        "firepower": 0,
+        "torpedo": 0,
+        "evasion": 31,
+        "antiwar": 262,
+        "aviation": 357,
+        "reload": 114,
+        "speed": 28,
+        "luck": 94,
+        "accuracy": 80
+      },
+      "level120": {
+        "health": 6984,
+        "firepower": 0,
+        "torpedo": 0,
+        "evasion": 35,
+        "antiwar": 286,
+        "aviation": 376,
+        "reload": 121,
+        "speed": 28,
+        "luck": 94,
+        "accuracy": 89
+      }
+    },
+    "enhanceValue": {
+      "firepower": 0,
+      "torpedo": 0,
+      "aviation": 75,
+      "reload": 35
+    },
+    "slots": [
+      {
+        "type": "Fighter",
+        "minEfficiency": 1.2,
+        "maxEfficiency": 1.35
+      },
+      {
+        "type": "Dive Bomber",
+        "minEfficiency": 1.1,
+        "maxEfficiency": 1.25
+      },
+      {
+        "type": "Torpedo Bomber",
+        "minEfficiency": 1.1,
+        "maxEfficiency": 1.25
+      }
+    ],
+    "skills": [
+      {
+        "color": "yellow",
+        "names": {
+          "en": "Elise's Tactical Guidance"
+        },
+        "description": "Every 10s: fires a Lv.10 special barrage (DMG is based on the skill's level). During battle, when another allied Main Fleet ship finishes loading a Salvo or an Airstrike: increases that ship's and Elise's DMG dealt by 5.0% for 8s; Furthermore, applies an additional effect based on the type of allied ship triggering this effect:\nBB, BC, or BBV: increases that ship's FP by 10.0% for 8s;\nCV, CVL, or BBV: increases that ship's AVI by 10.0% for 8s.\nThe status boost and DMG boost effects of this skill cannot be stacked."
+      },
+      {
+        "color": "red",
+        "names": {
+          "en": "Instructor's Duty"
+        },
+        "description": "At the start of battle, if there are two or more Venus Vacation ships in the same fleet: increases this ship's Aircraft efficiency by 5.0%. Whenever this ship launches an airstrike: launches an additional Lv.10 special airstrike (DMG is based on the skill's level)."
+      }
+    ],
+    "limitBreaks": [
+      [
+        "All Dive Bombers +1",
+        "Aircraft efficiency +3%"
+      ],
+      [
+        "Hangar capacity +1",
+        "All Fighters +1",
+        "Aircraft efficiency +5%"
+      ],
+      [
+        "All aircraft +1",
+        "Aircraft efficiency +7%"
+      ]
+    ],
+    "construction": {
+      "availableIn": {
+        "light": false,
+        "heavy": false,
+        "aviation": false,
+        "limited": true,
+        "exchange": false
+      }
+    },
+    "scrapValue": {
+      "coin": 2920,
+      "oil": 0,
+      "medal": 10
+    },
+    "obtainedFrom": {
+      "obtainedFrom": "Event: Vacation Lane"
+    },
+    "retrofit": false,
+    "misc": {
+      "voice": {
+        "name": "Asami Seto"
+      }
+    },
+    "skins": [
+      {
+        "name": "Elise",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_DOA.webp",
+        "info": {
+          "obtainedFrom": "Default",
+          "enClient": "Yes"
+        }
+      },
+      {
+        "name": "One Divine Afternoon",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_2_DOA.webp",
+        "info": {
+          "cost": 1000,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
+      }
+    ]
+  },
+  "1060011": {
+    "id": "1060011",
+    "names": {
+      "en": "Shizuku",
+      "jp": "しずく",
+      "cn": "雫",
+      "code": "Shizuku"
+    },
+    "rarity": "Super Rare",
+    "stars": {
+      "stars": "★★★★★★",
+      "value": 6
+    },
+    "thumbnail": "https://raw.githubusercontent.com/iujab/azurlane-images/main/thumbnails/1060011.png",
+    "wikiUrl": "https://azurlane.koumakan.jp/wiki/Shizuku",
+    "class": "DOAXVV",
+    "hullType": "Battleship",
+    "nationality": "KizunaAI",
+    "stats": {
+      "level100": {
+        "health": 6946,
+        "firepower": 365,
+        "torpedo": 0,
+        "evasion": 9,
+        "antiwar": 189,
+        "aviation": 0,
+        "reload": 123,
+        "speed": 20,
+        "luck": 86,
+        "accuracy": 52
+      },
+      "level120": {
+        "health": 7696,
+        "firepower": 385,
+        "torpedo": 0,
+        "evasion": 10,
+        "antiwar": 207,
+        "aviation": 0,
+        "reload": 131,
+        "speed": 20,
+        "luck": 86,
+        "accuracy": 59
+      }
+    },
+    "enhanceValue": {
+      "firepower": 77,
+      "torpedo": 0,
+      "aviation": 0,
+      "reload": 38
+    },
+    "slots": [
+      {
+        "type": "Artillery (Battleship)",
+        "minEfficiency": 1.05,
+        "maxEfficiency": 1.35
+      },
+      {
+        "type": "Artillery (Destroyer)",
+        "minEfficiency": 2,
+        "maxEfficiency": 2
+      },
+      {
+        "type": "Anti-Air Gun",
+        "minEfficiency": 1,
+        "maxEfficiency": 1
+      }
+    ],
+    "skills": [
+      {
+        "color": "blue",
+        "names": {
+          "en": "Handmade Bento"
+        },
+        "description": "At the start of battle: increases the fleet's FP, AA, and EVA by 10.0% (this effect lasts until Shizuku's next Main Gun attack).\nWhenever Shizuku fires her Main Guns: increases the fleet's FP, AA, and EVA based on her Main Guns' reloading time (1.0% increase for every 3s spent reloading); this effect lasts until the next time this ship fires her Main Guns."
+      },
+      {
+        "color": "red",
+        "names": {
+          "en": "Foxy Cosplay"
+        },
+        "description": "Increases this ship's FP by 10.0%. Whenever this ship fires her Main Guns: 80% chance to fire a Lv.10 special barrage (DMG is based on the skill's level).\nEvery 10s during battle: restores 2.0% Max HP to the ally with the lowest current percentage of HP and another random ally.\nOnce per battle, when an ally falls below 20.0% Max HP as a result of DMG taken, restores 8.0% of Shizuku's Max HP to that ship. When this effect activates: this skill's special barrage is enhanced until the end of battle, increases this ship's FP by 5.0%, then immediately fires this barrage again."
+      }
+    ],
+    "limitBreaks": [
+      [
+        "Main gun base +1",
+        "Main gun efficiency +5%"
+      ],
+      [
+        "Secondary gun base +2",
+        "Main gun efficiency +10%"
+      ],
+      [
+        "Main gun base +1",
+        "Main gun efficiency +15%"
+      ]
+    ],
+    "construction": {
+      "availableIn": {
+        "light": false,
+        "heavy": false,
+        "aviation": false,
+        "limited": true,
+        "exchange": false
+      }
+    },
+    "scrapValue": {
+      "coin": 3170,
+      "oil": 0,
+      "medal": 10
+    },
+    "obtainedFrom": {
+      "obtainedFrom": "Event: Vacation Lane"
+    },
+    "retrofit": false,
+    "misc": {
+      "voice": {
+        "name": "Hina Yomiya"
+      }
+    },
+    "skins": [
+      {
+        "name": "Shizuku",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA.webp",
+        "info": {
+          "obtainedFrom": "Default",
+          "enClient": "Yes"
+        }
+      },
+      {
+        "name": "Frolicking in the Tide",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_2_DOA.webp",
+        "info": {
+          "cost": 1000,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
+      }
+    ]
+  },
+  "1060012": {
+    "id": "1060012",
+    "names": {
+      "en": "Shandy",
+      "jp": "シャンディ",
+      "cn": "香迪",
+      "code": "Shandy"
+    },
+    "rarity": "Super Rare",
+    "stars": {
+      "stars": "★★★★★★",
+      "value": 6
+    },
+    "thumbnail": "https://raw.githubusercontent.com/iujab/azurlane-images/main/thumbnails/1060012.png",
+    "wikiUrl": "https://azurlane.koumakan.jp/wiki/Shandy",
+    "class": "DOAXVV",
+    "hullType": "Heavy Cruiser",
+    "nationality": "KizunaAI",
+    "stats": {
+      "level100": {
+        "health": 4212,
+        "firepower": 225,
+        "torpedo": 182,
+        "evasion": 73,
+        "antiwar": 208,
+        "aviation": 0,
+        "reload": 161,
+        "speed": 28,
+        "luck": 85,
+        "accuracy": 118
+      },
+      "level120": {
+        "health": 4666,
+        "firepower": 238,
+        "torpedo": 193,
+        "evasion": 85,
+        "antiwar": 227,
+        "aviation": 0,
+        "reload": 170,
+        "speed": 28,
+        "luck": 85,
+        "accuracy": 132
+      }
+    },
+    "enhanceValue": {
+      "firepower": 46,
+      "torpedo": 37,
+      "aviation": 0,
+      "reload": 50
+    },
+    "slots": [
+      {
+        "type": "Artillery (Heavy Cruiser)",
+        "minEfficiency": 1.3,
+        "maxEfficiency": 1.35
+      },
+      {
+        "type": "Torpedo",
+        "minEfficiency": 1.4,
+        "maxEfficiency": 1.65
+      },
+      {
+        "type": "Anti-Air Gun",
+        "minEfficiency": 1.05,
+        "maxEfficiency": 1.05
+      }
+    ],
+    "skills": [
+      {
+        "color": "yellow",
+        "names": {
+          "en": "Dreamy Mixology"
+        },
+        "description": "At the start of battle and every 20s after that: performs a feat of mixology and applies [Venus Concoction] to 2 random Vanguard allies. The possible effects are:\n1) [Golden Venus Concoction]: Increases this ship's ACC and RLD by 20.0% for 20s;\n2) [Crimson Venus Concoction]: Increases this ship's Crit Rate and Crit DMG by 20.0% for 20s;\n3) [Verdant Venus Concoction]: Increases this ship's EVA by 10.0% and reduces this ship's DMG taken by 10.0% for 20s;\n4) [Cosmopolitan]: Grants the effects of all of the above [Venus Concoctions]."
+      },
+      {
+        "color": "red",
+        "names": {
+          "en": "Flawless Focus"
+        },
+        "description": "Increases this ship's FP and TRP by 10.0%. Every 20s: randomly targets one enemy, reducing its SPD by 10.0% for 16s; while there is a targeted enemy on the field: every 3s, performs a Lv.10 special attack at that enemy, which ignores shields (DMG is based on the skill's level); every 6 times this ship fires her Main Guns: fires a Lv.10 special barrage (DMG is based on the skill's level)."
+      }
+    ],
+    "limitBreaks": [
+      [
+        "Main gun efficiency +5%"
+      ],
+      [
+        "Torpedo base +1",
+        "Torpedo preload +1",
+        "Torpedo efficiency +10%"
+      ],
+      [
+        "Torpedo efficiency +15%"
+      ]
+    ],
+    "construction": {
+      "availableIn": {
+        "light": false,
+        "heavy": false,
+        "aviation": false,
+        "limited": true,
+        "exchange": false
+      }
+    },
+    "scrapValue": {
+      "coin": 2195,
+      "oil": 0,
+      "medal": 10
+    },
+    "obtainedFrom": {
+      "obtainedFrom": "Event: Vacation Lane"
+    },
+    "retrofit": false,
+    "misc": {
+      "voice": {
+        "name": "Shino Shimoji"
+      }
+    },
+    "skins": [
+      {
+        "name": "Shandy",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA.webp",
+        "info": {
+          "obtainedFrom": "Default",
+          "enClient": "Yes"
+        }
+      },
+      {
+        "name": "An Enchanting Sip",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_2_DOA.webp",
+        "info": {
+          "cost": 1000,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
+      }
+    ]
+  },
+  "1060013": {
+    "id": "1060013",
+    "names": {
+      "en": "Tsukushi",
+      "jp": "つくし",
+      "cn": "筑紫 ",
+      "code": "Tsukushi"
+    },
+    "rarity": "Super Rare",
+    "stars": {
+      "stars": "★★★★★★",
+      "value": 6
+    },
+    "thumbnail": "https://raw.githubusercontent.com/iujab/azurlane-images/main/thumbnails/1060013.png",
+    "wikiUrl": "https://azurlane.koumakan.jp/wiki/Tsukushi",
+    "class": "DOAXVV",
+    "hullType": "Destroyer",
+    "nationality": "KizunaAI",
+    "stats": {
+      "level100": {
+        "health": 1739,
+        "firepower": 86,
+        "torpedo": 470,
+        "evasion": 201,
+        "antiwar": 151,
+        "aviation": 0,
+        "reload": 193,
+        "speed": 42.6,
+        "luck": 89,
+        "accuracy": 174
+      },
+      "level120": {
+        "health": 1926,
+        "firepower": 91,
+        "torpedo": 495,
+        "evasion": 228,
+        "antiwar": 165,
+        "aviation": 0,
+        "reload": 204,
+        "speed": 42.6,
+        "luck": 89,
+        "accuracy": 195
+      }
+    },
+    "enhanceValue": {
+      "firepower": 18,
+      "torpedo": 100,
+      "aviation": 0,
+      "reload": 59
+    },
+    "slots": [
+      {
+        "type": "Artillery (Destroyer)",
+        "minEfficiency": 1.2,
+        "maxEfficiency": 1.25
+      },
+      {
+        "type": "Torpedo",
+        "minEfficiency": 1.2,
+        "maxEfficiency": 1.4
+      },
+      {
+        "type": "Anti-Air Gun",
+        "minEfficiency": 1.1,
+        "maxEfficiency": 1.15
+      }
+    ],
+    "skills": [
+      {
+        "color": "red",
+        "names": {
+          "en": "Impactful Composition"
+        },
+        "description": "At the start of battle, increases this ship's FP and TRP by 15.0%. For each Venus Vacation ship in the fleet (up to a maximum of 3): increases this ship's ACC and RLD by 5.0%. Every 20s during battle: fires a Lv.10 special barrage (DMG is based on the skill's level); enemies hit by this barrage take 5.0% increased DMG from Tsukushi (cannot be stacked)."
+      },
+      {
+        "color": "blue",
+        "names": {
+          "en": "Homebody's Leisure Time"
+        },
+        "description": "At the start of battle, increases this ship's EVA by 15.0% and generates a barrier that lasts until the end of battle; this barrier can absorb up to 8.0% of this ship's Max HP. When this barrier is broken: restores 5.0% Max HP to this ship and reduces DMG taken by 5.0% until the end of battle."
+      }
+    ],
+    "limitBreaks": [
+      [
+        "Torpedo efficiency +5%"
+      ],
+      [
+        "Torpedo base +1",
+        "Torpedo preload +1",
+        "Torpedo efficiency +10%"
+      ],
+      [
+        "All weapons' efficiency +5%"
+      ]
+    ],
+    "construction": {
+      "availableIn": {
+        "light": false,
+        "heavy": false,
+        "aviation": false,
+        "limited": true,
+        "exchange": false
+      }
+    },
+    "scrapValue": {
+      "coin": 1448,
+      "oil": 0,
+      "medal": 10
+    },
+    "obtainedFrom": {
+      "obtainedFrom": "Event: Vacation Lane"
+    },
+    "retrofit": false,
+    "misc": {
+      "voice": {
+        "name": "Maria Sashide"
+      }
+    },
+    "skins": [
+      {
+        "name": "Tsukushi",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA.webp",
+        "info": {
+          "obtainedFrom": "Default",
+          "enClient": "Yes"
+        }
+      },
+      {
+        "name": "Dream Machine",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_2_DOA.webp",
+        "info": {
+          "cost": 1000,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
+      }
+    ]
+  },
+  "1060014": {
+    "id": "1060014",
+    "names": {
+      "en": "Patty",
+      "jp": "パティ",
+      "cn": "派蒂",
+      "code": "Patty"
+    },
+    "rarity": "Super Rare",
+    "stars": {
+      "stars": "★★★★★★",
+      "value": 6
+    },
+    "thumbnail": "https://raw.githubusercontent.com/iujab/azurlane-images/main/thumbnails/1060014.png",
+    "wikiUrl": "https://azurlane.koumakan.jp/wiki/Patty",
+    "class": "DOAXVV",
+    "hullType": "Submarine",
+    "nationality": "KizunaAI",
+    "stats": {
+      "level100": {
+        "health": 1458,
+        "firepower": 54,
+        "torpedo": 497,
+        "evasion": 40,
+        "antiwar": 0,
+        "aviation": 0,
+        "reload": 92,
+        "speed": 28,
+        "luck": 86,
+        "accuracy": 174
+      },
+      "level120": {
+        "health": 1616,
+        "firepower": 57,
+        "torpedo": 523,
+        "evasion": 46,
+        "antiwar": 0,
+        "aviation": 0,
+        "reload": 97,
+        "speed": 28,
+        "luck": 86,
+        "accuracy": 194
+      }
+    },
+    "enhanceValue": {
+      "firepower": 11,
+      "torpedo": 106,
+      "aviation": 0,
+      "reload": 28
+    },
+    "slots": [
+      {
+        "type": "Torpedo (Submarine)",
+        "minEfficiency": 1.15,
+        "maxEfficiency": 1.3
+      },
+      {
+        "type": "Torpedo (Submarine)",
+        "minEfficiency": 1.15,
+        "maxEfficiency": 1.3
+      },
+      {
+        "type": "Artillery (Destroyer)",
+        "minEfficiency": 0.75,
+        "maxEfficiency": 0.75
+      }
+    ],
+    "skills": [
+      {
+        "color": "red",
+        "names": {
+          "en": "Greetings From Below"
+        },
+        "description": "At the start of battle: fires a Lv.10 special barrage (DMG is based on the skill's level), reducing the SPD of enemies hit by 20.0% for 8s."
+      },
+      {
+        "color": "red",
+        "names": {
+          "en": "Keen Danger Senses"
+        },
+        "description": "Increases this boat's OXY by 20. When this boat surfaces: fires a Lv.10 special barrage (DMG is based on the skill's level), reducing the DMG dealt by enemies hit by 8.0% for 10s. While retreating: increases this boat's SPD by 50.0%."
+      }
+    ],
+    "limitBreaks": [
+      [
+        "Torpedo efficiency +5%"
+      ],
+      [
+        "Torpedo base +1",
+        "Improve hunting range"
+      ],
+      [
+        "Torpedo efficiency +10%"
+      ]
+    ],
+    "construction": {
+      "availableIn": {
+        "light": false,
+        "heavy": false,
+        "aviation": false,
+        "limited": true,
+        "exchange": false
+      }
+    },
+    "scrapValue": {
+      "coin": 1206,
+      "oil": 0,
+      "medal": 10
+    },
+    "obtainedFrom": {
+      "obtainedFrom": "Event: Vacation Lane"
+    },
+    "retrofit": false,
+    "misc": {
+      "voice": {
+        "name": "Marika Kouno"
+      }
+    },
+    "skins": [
+      {
+        "name": "Patty",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_DOA.webp",
+        "info": {
+          "obtainedFrom": "Default",
+          "enClient": "Yes"
+        }
+      },
+      {
+        "name": "Fluffy-Wuffy Paradise",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_2_DOA.webp",
+        "info": {
+          "cost": 1000,
+          "obtainedFrom": "Limited (Event)",
+          "enClient": "Yes"
+        }
+      }
+    ]
+  },
+  "1060015": {
+    "id": "1060015",
+    "names": {
+      "en": "Yukino",
+      "jp": "ゆきの",
+      "cn": "千乃",
+      "code": "Yukino"
+    },
+    "rarity": "Super Rare",
+    "stars": {
+      "stars": "★★★★★★",
+      "value": 6
+    },
+    "thumbnail": "https://raw.githubusercontent.com/iujab/azurlane-images/main/thumbnails/1060015.png",
+    "wikiUrl": "https://azurlane.koumakan.jp/wiki/Yukino",
+    "class": "DOAXVV",
+    "hullType": "Light Cruiser",
+    "nationality": "KizunaAI",
+    "stats": {
+      "level100": {
+        "health": 3575,
+        "firepower": 156,
+        "torpedo": 0,
+        "evasion": 88,
+        "antiwar": 325,
+        "aviation": 0,
+        "reload": 172,
+        "speed": 35,
+        "luck": 87,
+        "accuracy": 133
+      },
+      "level120": {
+        "health": 3960,
+        "firepower": 165,
+        "torpedo": 0,
+        "evasion": 99,
+        "antiwar": 355,
+        "aviation": 0,
+        "reload": 182,
+        "speed": 35,
+        "luck": 87,
+        "accuracy": 148
+      }
+    },
+    "enhanceValue": {
+      "firepower": 32,
+      "torpedo": 0,
+      "aviation": 0,
+      "reload": 53
+    },
+    "slots": [
+      {
+        "type": "Artillery (Light Cruiser)",
+        "minEfficiency": 1,
+        "maxEfficiency": 1.3
+      },
+      {
+        "type": "Artillery (Destroyer)",
+        "minEfficiency": 0.7,
+        "maxEfficiency": 0.7
+      },
+      {
+        "type": "Anti-Air Gun",
+        "minEfficiency": 1.1,
+        "maxEfficiency": 1.1
+      }
+    ],
+    "skills": [
+      {
+        "color": "red",
+        "names": {
+          "en": "Neon Pink Burst"
+        },
+        "description": "At the start of battle, increases this ship's FP and ACC by 10.0%. Every 15s after the start of battle: 70.0% chance to fire a Lv.10 special barrage (DMG is based on the skill's level), inflicting Armor Break on enemies hit."
+      },
+      {
+        "color": "blue",
+        "names": {
+          "en": "Supporting What You \"Love\"!"
+        },
+        "description": "During battle, sends support to allies if certain conditions are met!\n1) When a ship in your Main Fleet readies a Salvo or an Airstrike: increases that ship's DMG dealt by 8.0% for 8s;\n2) When a ship in your Vanguard readies a Torpedo strike: increases that ship's Crit Rate by 10.0% for 8s;\n3) When a ship falls below 20.0% HP as a result of DMG taken: restores 10.0% Max HP to that ship.\nEach effect can only trigger once every 8s, up to a maximum of twice per battle. Each time this ship sends support: increases this ship's EVA by 5.0% and reduces her DMG taken by 5.0% for 8s."
+      }
+    ],
+    "limitBreaks": [
+      [
+        "Main gun efficiency +5%"
+      ],
+      [
+        "Main gun base +1",
+        "Main gun efficiency +10%"
+      ],
+      [
+        "Main gun efficiency +15%"
+      ]
+    ],
+    "construction": {
+      "availableIn": {
+        "light": false,
+        "heavy": false,
+        "aviation": false,
+        "limited": true,
+        "exchange": false
+      }
+    },
+    "scrapValue": {
+      "coin": 1700,
+      "oil": 0,
+      "medal": 10
+    },
+    "obtainedFrom": {
+      "obtainedFrom": "Event: Vacation Lane"
+    },
+    "retrofit": false,
+    "misc": {
+      "voice": {
+        "name": "Kaori Maeda"
+      }
+    },
+    "skins": [
+      {
+        "name": "Yukino",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA.webp",
+        "info": {
+          "obtainedFrom": "Default",
+          "enClient": "Yes"
+        }
+      },
+      {
+        "name": "Charming Beast",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_2_DOA.webp",
+        "info": {
+          "cost": 1000,
           "obtainedFrom": "Limited (Event)",
           "enClient": "Yes"
         }
