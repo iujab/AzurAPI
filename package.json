@@ -54,7 +54,7 @@
   "bugs": {
     "url": "https://github.com/iujab/Lycoris-AzurAPI/issues"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "author": "iujab",
   "publishConfig": {
     "access": "public"

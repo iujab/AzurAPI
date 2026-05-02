@@ -112,6 +112,8 @@ Ship paintings and thumbnails are hosted in a separate GitHub repo: [iujab/azurl
 
 ## License and Rights
 
+This software is licensed under the **GNU General Public License v3.0** — see [LICENSE](LICENSE).
+
 This is an **unofficial, non-commercial, community-maintained fan project**. It is not developed, endorsed, sponsored, or in any way affiliated with Manjuu, Yongshi, Yostar, or any of their subsidiaries.
 
 ## Acknowledgments
