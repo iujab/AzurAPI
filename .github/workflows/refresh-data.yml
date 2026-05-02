@@ -2,8 +2,10 @@ name: Refresh Ship Data
 
 on:
   schedule:
-    - cron: '0 0 * * 1'  # Every Monday at midnight UTC
+    - cron: '0 0 * * 1'  # Weekly fallback; primary trigger is repository_dispatch from azurlane-images
   workflow_dispatch:       # Manual trigger
+  repository_dispatch:
+    types: [azurlane-images-updated]
 
 permissions:
   contents: write
