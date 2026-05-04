@@ -21354,7 +21354,13 @@
       },
       {
         "name": "Unique Sunshine",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/beikaluolaina_3.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/beikaluolaina_3_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/beikaluolaina_3_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/beikaluolaina_3.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/beikaluolaina_3_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/beikaluolaina_3_n_rw.webp"
+        },
         "info": {
           "cost": 980,
           "obtainedFrom": "Limited (Event)",
@@ -49860,7 +49866,15 @@
       },
       {
         "name": "Dignified Swimsuit Training",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4_rw.webp",
+          "uncensored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4_n.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/baiyanjuren_4_bj.webp"
+        },
         "info": {
           "cost": 1180,
           "obtainedFrom": "Limited (Event)",
@@ -68399,7 +68413,8 @@
         "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/wushiling_6.webp",
         "images": {
           "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/wushiling_6.webp",
-          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/wushiling_6.webp"
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/wushiling_6.webp",
+          "uncensored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/wushiling_6_n.webp"
         },
         "info": {
           "obtainedFrom": "Special",
@@ -86797,7 +86812,13 @@
       },
       {
         "name": "Traces of Summery Love",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yichui_7.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yichui_7_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yichui_7_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yichui_7.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yichui_7_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yichui_7_n_rw.webp"
+        },
         "info": {
           "cost": 980,
           "obtainedFrom": "Limited (Event)",
@@ -109153,10 +109174,11 @@
       },
       {
         "name": "Soaring Apsaras",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_3.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_3_rw.webp",
         "images": {
-          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_3.webp",
-          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_3.webp"
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_3_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_3.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_3_rw.webp"
         },
         "info": {
           "obtainedFrom": "Special",
@@ -109180,10 +109202,11 @@
       },
       {
         "name": "Baker of Heart into Sweets",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_5.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_5_rw.webp",
         "images": {
-          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_5.webp",
-          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_5.webp"
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_5_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_5.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haitian_5_rw.webp"
         },
         "info": {
           "obtainedFrom": "Special",
@@ -134985,7 +135008,13 @@
       },
       {
         "name": "Blooms in the Night Sky",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haixiao_3_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haixiao_3_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haixiao_3_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haixiao_3_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haixiao_3_DOA_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/haixiao_3_DOA_n_rw.webp"
+        },
         "info": {
           "cost": 1000,
           "obtainedFrom": "Limited (Event)",
@@ -135866,7 +135895,14 @@
     "skins": [
       {
         "name": "Elise",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_DOA_rw.webp",
+          "uncensored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_DOA_n.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_DOA_n_rw.webp"
+        },
         "info": {
           "obtainedFrom": "Default",
           "enClient": "Yes"
@@ -135874,7 +135910,14 @@
       },
       {
         "name": "One Divine Afternoon",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_2_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_2_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_2_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_2_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_2_DOA_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_2_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/yilisi_2_DOA_bj.webp"
+        },
         "info": {
           "cost": 1000,
           "obtainedFrom": "Limited (Event)",
@@ -136006,7 +136049,15 @@
     "skins": [
       {
         "name": "Shizuku",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA_rw.webp",
+          "uncensored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA_n.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_DOA_bj.webp"
+        },
         "info": {
           "obtainedFrom": "Default",
           "enClient": "Yes"
@@ -136014,7 +136065,14 @@
       },
       {
         "name": "Frolicking in the Tide",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_2_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_2_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_2_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_2_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_2_DOA_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_2_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/na_2_DOA_bj.webp"
+        },
         "info": {
           "cost": 1000,
           "obtainedFrom": "Limited (Event)",
@@ -136145,7 +136203,15 @@
     "skins": [
       {
         "name": "Shandy",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA_rw.webp",
+          "uncensored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA_n.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_DOA_bj.webp"
+        },
         "info": {
           "obtainedFrom": "Default",
           "enClient": "Yes"
@@ -136153,7 +136219,14 @@
       },
       {
         "name": "An Enchanting Sip",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_2_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_2_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_2_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_2_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_2_DOA_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_2_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/xiangdi_2_DOA_bj.webp"
+        },
         "info": {
           "cost": 1000,
           "obtainedFrom": "Limited (Event)",
@@ -136284,7 +136357,15 @@
     "skins": [
       {
         "name": "Tsukushi",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA_rw.webp",
+          "uncensored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA_n.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_DOA_bj.webp"
+        },
         "info": {
           "obtainedFrom": "Default",
           "enClient": "Yes"
@@ -136292,7 +136373,14 @@
       },
       {
         "name": "Dream Machine",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_2_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_2_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_2_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_2_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_2_DOA_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_2_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/zhuzi_2_DOA_bj.webp"
+        },
         "info": {
           "cost": 1000,
           "obtainedFrom": "Limited (Event)",
@@ -136422,7 +136510,14 @@
     "skins": [
       {
         "name": "Patty",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_DOA_rw.webp",
+          "uncensored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_DOA_n.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_DOA_n_rw.webp"
+        },
         "info": {
           "obtainedFrom": "Default",
           "enClient": "Yes"
@@ -136430,7 +136525,13 @@
       },
       {
         "name": "Fluffy-Wuffy Paradise",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_2_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_2_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_2_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_2_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_2_DOA_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/paidi_2_DOA_n_rw.webp"
+        },
         "info": {
           "cost": 1000,
           "obtainedFrom": "Limited (Event)",
@@ -136560,7 +136661,15 @@
     "skins": [
       {
         "name": "Yukino",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA_rw.webp",
+          "uncensored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA_n.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_DOA_bj.webp"
+        },
         "info": {
           "obtainedFrom": "Default",
           "enClient": "Yes"
@@ -136568,7 +136677,14 @@
       },
       {
         "name": "Charming Beast",
-        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_2_DOA.webp",
+        "image": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_2_DOA_rw.webp",
+        "images": {
+          "default": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_2_DOA_rw.webp",
+          "censored": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_2_DOA.webp",
+          "censored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_2_DOA_rw.webp",
+          "uncensored_nobg": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_2_DOA_n_rw.webp",
+          "background": "https://raw.githubusercontent.com/iujab/azurlane-images/main/paintings/qiannai_2_DOA_bj.webp"
+        },
         "info": {
           "cost": 1000,
           "obtainedFrom": "Limited (Event)",
